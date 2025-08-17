@@ -2,7 +2,9 @@
 
 A React-based web application that leverages Google's Gemini AI to generate stories with illustrations, presented in a beautiful **book interface** with PDF export and text-to-speech capabilities. This project was created during the PanScience hackathon.
 
-🌐 **Live Demo:** [https://story-teller-kohl.vercel.app/](https://story-teller-kohl.vercel.app/)
+🌐 **Live Demo:** [https://story-teller-enhanced.vercel.app/](https://story-teller-enhanced.vercel.app/)
+
+📚 **GitHub Repository:** [https://github.com/DreamerAkhilesh/Story-Teller-enhanced-.git](https://github.com/DreamerAkhilesh/Story-Teller-enhanced-.git)
 
 ## 🚀 Features
 
@@ -53,8 +55,8 @@ A React-based web application that leverages Google's Gemini AI to generate stor
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/DreamerAkhilesh/Story-Teller.git
-   cd gemini-story-app
+   git clone https://github.com/DreamerAkhilesh/Story-Teller-enhanced-.git
+   cd Story-Teller-enhanced-
    ```
 
 2. Install dependencies:
@@ -119,7 +121,7 @@ The application will be available at `http://localhost:5173`
 ## 🏗️ Project Structure
 
 ```
-gemini-story-app/
+Story-Teller-enhanced-/
 ├── public/            # Public assets
 ├── src/              # Source code
 │   ├── assets/       # Static assets
