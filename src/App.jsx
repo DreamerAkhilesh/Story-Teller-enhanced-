@@ -30,15 +30,12 @@ function App() {
           {
             role: "user",
             parts: [
-              { text: `Write a short story and illustrate it with 5 related and animated images:
-                        For each scene, generate a corresponding animated-style illustration that:
-                        Clearly represents the specific moment in the story.
-                        Uses a consistent art style, color palette, and character design across all images.
-                        Shows visual continuity, so the images relate to each other (e.g., same character, same environment, recurring objects).
-                        Is engaging, whimsical, and slightly animated, like a high-quality cartoon or animated movie still.
-                        Label each image with its story scene (e.g., Page 1: Beginning, Page 2: Discovery, Page 3: Encounter, etc.) so that together, the images visually narrate the story as well as the text does.
-                        There should only be 5 paragraphs and images in the story.(mandatory)
-                        Print the story only not image details: ${prompt}` },
+              { text: `Write a whimsical, engaging short story with exactly 5 paragraphs. For each paragraph, generate a corresponding animated-style illustration that:
+              Clearly represents the specific moment in that paragraph.
+              Maintains a consistent art style, color palette, and character design across all images.
+              Shows visual continuity, so characters, environment, and recurring objects remain consistent.
+              Is engaging, slightly animated, and looks like a high-quality cartoon or animated movie still.
+              Important: There should be only 5 paragraphs in the story and only 5 images, no more, no less. Each paragraph must directly correspond to its labeled image. Generate the story text first, without any image details, and ensure the images follow this structure strictly.${prompt}` },
             ],
           },
         ],
@@ -331,24 +328,66 @@ function App() {
           {/* Cover Page */}
           {currentPage === 0 && (
             <div className="bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white p-8 rounded-2xl shadow-2xl text-center min-h-[400px] flex flex-col justify-center book-cover relative overflow-hidden">
-              {/* Background Pattern */}
+              {/* Enhanced Background Pattern */}
               <div className="absolute inset-0 opacity-10">
-                <div className="absolute top-8 left-8 w-16 h-16 border-2 border-white rounded-full"></div>
-                <div className="absolute top-16 right-16 w-12 h-12 border-2 border-white rounded-full"></div>
-                <div className="absolute bottom-16 left-16 w-10 h-10 border-2 border-white rounded-full"></div>
-                <div className="absolute bottom-8 right-8 w-20 h-20 border-2 border-white rounded-full"></div>
+                <div className="absolute top-8 left-8 w-16 h-16 border-2 border-white rounded-full floating"></div>
+                <div className="absolute top-16 right-16 w-12 h-12 border-2 border-white rounded-full floating" style={{animationDelay: '1s'}}></div>
+                <div className="absolute bottom-16 left-16 w-10 h-10 border-2 border-white rounded-full floating" style={{animationDelay: '2s'}}></div>
+                <div className="absolute bottom-8 right-8 w-20 h-20 border-2 border-white rounded-full floating" style={{animationDelay: '0.5s'}}></div>
+                <div className="absolute top-1/2 left-4 w-8 h-8 border border-white rounded-full floating" style={{animationDelay: '1.5s'}}></div>
+                <div className="absolute top-1/2 right-4 w-6 h-6 border border-white rounded-full floating" style={{animationDelay: '2.5s'}}></div>
               </div>
               
-              <h1 className="text-4xl font-bold mb-4 text-shadow-lg">AI Generated Story</h1>
-              <h2 className="text-2xl mb-6 opacity-90">A Magical Journey</h2>
-              <p className="text-lg mb-6 opacity-80">Crafted by Gemini AI</p>
-              <div className="text-base opacity-70 bg-white bg-opacity-10 px-4 py-2 rounded-full inline-block">
-                {new Date().toLocaleDateString('en-US', { 
-                  weekday: 'long', 
-                  year: 'numeric', 
-                  month: 'long', 
-                  day: 'numeric' 
-                })}
+              {/* Decorative Corner Elements */}
+              <div className="absolute top-0 left-0 w-16 h-16 border-l-4 border-t-4 border-white opacity-30"></div>
+              <div className="absolute top-0 right-0 w-16 h-16 border-r-4 border-t-4 border-white opacity-30"></div>
+              <div className="absolute bottom-0 left-0 w-16 h-16 border-l-4 border-b-4 border-white opacity-30"></div>
+              <div className="absolute bottom-0 right-0 w-16 h-16 border-r-4 border-b-4 border-white opacity-30"></div>
+              
+              {/* Central Decorative Circle */}
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 border-2 border-white rounded-full opacity-20"></div>
+              
+              {/* Main Content */}
+              <div className="relative z-10">
+                {/* Book Icon */}
+                <div className="mb-6 flex justify-center">
+                  <div className="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm border border-white border-opacity-30 cover-icon">
+                    <span className="text-4xl">📚</span>
+                  </div>
+                </div>
+                
+                {/* Main Title */}
+                <h1 className="text-5xl font-bold mb-6 text-shadow-lg bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent cover-title">
+                  AI Generated Story
+                </h1>
+                
+                {/* Subtitle */}
+                <h2 className="text-3xl mb-8 opacity-90 font-medium cover-subtitle">
+                  A Magical Journey
+                </h2>
+                
+                {/* Author Line */}
+                <div className="mb-8">
+                  <p className="text-xl opacity-80 font-light">Crafted by</p>
+                  <p className="text-2xl font-semibold opacity-90 bg-gradient-to-r from-blue-200 to-purple-200 bg-clip-text text-transparent">
+                    Gemini AI
+                  </p>
+                </div>
+                
+                {/* Date */}
+                <div className="text-lg opacity-70 bg-white bg-opacity-10 px-6 py-3 rounded-full inline-block backdrop-blur-sm border border-white border-opacity-20">
+                  {new Date().toLocaleDateString('en-US', { 
+                    weekday: 'long', 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric' 
+                  })}
+                </div>
+                
+                {/* Decorative Bottom Line */}
+                <div className="mt-8 flex justify-center">
+                  <div className="w-32 h-1 bg-gradient-to-r from-transparent via-white to-transparent opacity-40 decorative-line"></div>
+                </div>
               </div>
             </div>
           )}

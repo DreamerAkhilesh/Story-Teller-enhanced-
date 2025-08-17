@@ -19,9 +19,12 @@
 
 1. **Cover Page (Automatic):**
    - Beautiful gradient design with story title
-   - Decorative background elements
-   - Story metadata and creation date
-   - Glowing animation effects
+   - Enhanced decorative background elements with floating animations
+   - Professional book icon with backdrop blur effects
+   - Story metadata and creation date in elegant styling
+   - Decorative corner elements and central circle
+   - Animated title glow and subtitle floating effects
+   - Decorative bottom line with expansion animation
 
 2. **Navigate Through Pages:**
    - Use "⬅️ Previous" and "Next ➡️" buttons

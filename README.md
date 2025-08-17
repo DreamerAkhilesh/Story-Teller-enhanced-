@@ -1,4 +1,4 @@
-# Story-Teller
+1# Story-Teller
 
 A React-based web application that leverages Google's Gemini AI to generate stories with illustrations, presented in a beautiful **book interface** with PDF export and text-to-speech capabilities. This project was created during the PanScience hackathon.
 
@@ -19,6 +19,7 @@ A React-based web application that leverages Google's Gemini AI to generate stor
 
 ### 📚 Interactive Book Experience
 - **Book-Only Interface**: Stories automatically display in beautiful book layout
+- **Enhanced Cover Page**: Stunning design with floating animations and decorative elements
 - **Two-Page Spreads**: Images on left, text on right for perfect reading experience
 - **Beautiful Cover Page**: Gradient design with story metadata and decorative elements
 - **Smooth Navigation**: Previous/Next buttons with page indicators
