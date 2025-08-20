@@ -30,7 +30,7 @@ function App() {
           {
             role: "user",
             parts: [
-              { text: `Write a whimsical, engaging short story with exactly 5 paragraphs. For each paragraph, generate a corresponding animated-style illustration that:
+              { text: `Write a whimsical, engaging short story, simple for the kids, with exactly 5 paragraphs . For each paragraph, generate a corresponding animated-style illustration that:
               Clearly represents the specific moment in that paragraph.
               Maintains a consistent art style, color palette, and character design across all images.
               Shows visual continuity, so characters, environment, and recurring objects remain consistent.
